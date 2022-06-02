@@ -51,7 +51,7 @@ disqus: True
 disqus_shortname:    aiconcerto
 
 # This text will appear in the footer of every page. Markdown enabled.
-copyright:           '&copy; 2021.03. by AIWithDaddy'
+copyright:           '&copy; 2022.06. by AllAboutXAI'
 
 # Format of the permalinks
 permalink:           pretty

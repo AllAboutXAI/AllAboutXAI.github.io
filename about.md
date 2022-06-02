@@ -5,9 +5,8 @@ menu: true
 order: 10
 ---
 
-## 소개
+## Introduction (소개)
 
-인공지능 연구 자료를 공유하는 작은 소통의 공간
+A space for sharing the research resources for eXplainable/Interpretable AI
 
-현재 연구 주제: 이상 소리 감지 (Anomalous Sound Detection)
-
+설명/해석 인공지능 연구 자료를 공유하는 작은 소통의 공간

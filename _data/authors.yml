@@ -1,9 +1,9 @@
 # The primary author of this blog.
 # Must be the same as `author` in `_config.yml`.
 # Change `qwtel` to your shortname (used in the front matter to set a page's author, e.g. `author: qwtel`).
-AIWithDaddy:
+AllAboutXAI:
   name:              Tim
-  email:             ai.with.daddy@gmail.com
+  email:             allabout.xai@gmail.com
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
@@ -46,7 +46,7 @@ AIWithDaddy:
     # pinterest:       <username>
     # foursquare:      <number>
     # yelp:            <string>
-    github:          AIWithDaddy
+    github:          AllAboutXAI
     # stackoverflow:   <number/username>
     # npm:             <username>
     # hackernews:      <username>
@@ -57,8 +57,8 @@ AIWithDaddy:
     # delicious:       <username>
     # stumbleupon:     <username>
     # paypal:          <username>
-    email:           mailto:ai.with.daddy@gmail.com
-    #rss:             https://AIWithDaddy.github.io/feed.xml
+    email:           mailto:allabout.xai@gmail.com
+    #rss:             https://AllAboutXAI.github.io/feed.xml
 
 # Another author
 mdo:

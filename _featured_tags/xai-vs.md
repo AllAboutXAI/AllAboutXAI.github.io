@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: TS
+title: VS
 slug: vs
 category: xai
 menu: false
-order: 1
+order: 2
 ---

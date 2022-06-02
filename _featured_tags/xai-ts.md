@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: TS
-slug: ts
+title: Time Series
+slug: time series
 category: xai
 menu: false
 order: 1

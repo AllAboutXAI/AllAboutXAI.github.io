@@ -1,0 +1,34 @@
+---
+layout: post
+title: '[참고] DCASE2020 Task2 #3 - 경연 상위 팀 연구 내용 정리'
+subtitle: DCASE2010 Task2 #3
+categories: dev
+tags: ml ASD
+comments: true
+published: true
+---
+DCASE2020 Task2 경연에서 1위, 3위에 위치한 팀의 연구 내용을 간단하게 정리하였다.
+
+**1. 1위 팀**
+
+1) 연구 제목: UNSUPERVISED ANOMALOUS SOUND DETECTION USING SELF-SUPERVISED CLASSIFICATION AND GROUP MASKED AUTOENCODER FOR DENSITY ESTIMATION
+
+2) [연구 보고서](http://dcase.community/documents/challenge2020/technical_reports/DCASE2020_Giri_103_t2.pdf){:target="_blank"}
+
+3) 연구 주요 내용
+  - 밀도 평가(denstiy estimation)에 기반한 이상 탐지기인 GMADE(Group Masked Autoencoder for Density Estimation)와 자기 지도 분류(Self-supervised classification) 기반의 이상 탐지기의 앙상블을 이용
+
+**2. 3위 팀**
+
+1) 연구 제목: REFRAMING UNSUPERVISED MACHINE CONDITION MONITORING AS A SUPERVISED CLASSIFICATION TASK WITH OUTLIER-EXPOSED CLASSIFIERS
+
+2) [연구 보고서](http://dcase.community/documents/challenge2020/technical_reports/DCASE2020_Primus_36_t2.pdf){:target="_blank"}
+
+3) 연구 주요 내용
+  - Outlier-exposed classifier 개념 --> 아래 그림에서 Outlier 데이터(예를 들면 다른 장비의 정상 데이터)를 대상 장비의 비정상 데이터로 간주하여 학습을 수행한다면 비지도 학습이 아닌 지도 학습이 됨
+  
+  ![데이터 업로드](https://AIWithDaddy.github.io/assets/img/dev/ml/2021-04-02-dev-ml-dcase2020_3_1.jpg)
+  
+  - Outlier에 해당하는 데이터를 구하는 것은 비정상 데이터를 구하는 것에 비해 용이함
+
+4) [구현 코드 Repository](https://github.com/OptimusPrimus/dcase2020_task2){:target="_blank"}

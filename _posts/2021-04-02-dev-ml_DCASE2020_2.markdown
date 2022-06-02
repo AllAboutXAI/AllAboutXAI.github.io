@@ -1,0 +1,25 @@
+---
+layout: post
+title: '[참고] DCASE2020 Task2 #2 - Baseline 구현을 Colab을 이용해 실행해 본 예'
+subtitle: DCASE2010 Task2 #2
+categories: dev
+tags: ml ASD
+comments: true
+published: true
+---
+DCASE2020 Task2 Baseline 구현을 Colab을 이용해 실행해 본 예이다.
+
+1. [Baseline 구현 Repository](https://github.com/y-kawagu/dcase2020_task2_baseline){:target="_blank"}
+
+2. Colab 실행
+
+1) Baseline 코드를 구글 드라이브의 적당한 위치에 업로드한다. (예) 내 드라이브 > Test > dase2020
+
+2) 개발을 위한 데이터셋 중 slider 데이터를 1)의 위치의 dev_data 폴더에 업로드한다.
+
+![데이터 업로드](https://AIWithDaddy.github.io/assets/img/dev/ml/2021-04-02-dev-ml-dcase2020_2_1.jpg)
+
+3) Colab에서 노트 실행하기 --> [DCASE2020_task2_baseline.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/DCASE2020_task2_baseline.ipynb){:target="_blank"}
+- <참고 1> 노트가 실행되는 환경이 위 1), 2)의 환경(사용되는 구글 계정)이 일치해야 문제 없이 수행됨
+- <참고 2> "내 드라이브"를 마운트하는 동작에서 인증 코드를 입력해야 함. 표시되는 URL을 클릭하고 진행하면 인증 코드를 얻을 수 있음
+![드라이브 마운트 인증 코드 입력](https://AIWithDaddy.github.io/assets/img/dev/ml/2021-04-02-dev-ml-dcase2020_2_2.jpg)

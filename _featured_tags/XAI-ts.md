@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: ML
-slug: ml
-category: dev
+title: TS
+slug: ts
+category: XAI
 menu: false
 order: 1
 ---

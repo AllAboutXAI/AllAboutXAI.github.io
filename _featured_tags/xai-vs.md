@@ -1,6 +1,6 @@
 ---
 layout: tag-blog
-title: VS
+title: Vision
 slug: vs
 category: xai
 menu: false

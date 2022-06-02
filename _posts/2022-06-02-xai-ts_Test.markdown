@@ -1,9 +1,9 @@
 ---
 layout: post
-title: '[자료] DL을 이용한 오디오 데이터 분석 #1'
-subtitle: Audio Data Analysis #1
-categories: dev
-tags: dl audio signal python
+title: '[Paper Review] Time Series'
+subtitle: Test
+categories: xai
+tags: TimeSeries
 published: true
 ---
 DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, Nagesh Singh Chauhan이 작성한 [Audio Data Analysis Using Deep Learning with Python (Part 1)](https://www.kdnuggets.com/2020/02/audio-data-analysis-deep-learning-python-part-1.html){:target="_blank"}의 내용을 기반으로 작성된 것이다.

@@ -16,6 +16,10 @@ published: true
 - RNN 계열, CNN 계열, Transformers<br>
 - Lack of interpretability
 
+3) 시계열 데이터에 대한 XAI가 쉽지 않은 이유
+- 시계열 데이터는 직관적이지 않음 (사람에게도 시계열 데이터를 직관적으로 해석하는 것은 어려운 일일 때가 많음)
+- 현재까지 진행된 연구들은 입력의 어떤 부분(part)이 출력에 영향을 주는 지를 찾아내고 나타내는 것에 집중되어 있음
+
 3) 예제 코드 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_1.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_1.ipynb){:target="_blank"})
 
 > #librosa<br>

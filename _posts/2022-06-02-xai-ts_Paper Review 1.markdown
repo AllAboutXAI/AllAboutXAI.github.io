@@ -36,6 +36,7 @@ published: true
   <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-02-xai-ts-PaperReview_1_1.jpg" alt="Fig 2" style="width:40%">
   <figcaption>Fig. 2: XAI 방법론의 목적들의 상호 관계</figcaption>
 </figure>
+<br>
 
 [Tim's Note] XAI 관련 용어는 표준적인 정의가 있다고 보기 어려움
 

@@ -33,7 +33,7 @@ published: true
 - 확신성(Confidence): 모델이 내놓은 결과를 확신할 수 있는 지 여부를 정량적(확률적)으로 평가함
 
 <figure>
-  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-02-xai-ts-PaperReview_1_1.jpg" alt="Fig 2" style="width:50%">
+  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-02-xai-ts-PaperReview_1_1.jpg" alt="Fig 2" style="width:30%">
   <figcaption>Fig. 2: XAI 방법론의 목적들의 상호 관계</figcaption>
 </figure>
 

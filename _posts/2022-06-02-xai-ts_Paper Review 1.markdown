@@ -22,7 +22,7 @@ published: true
 
 **2. XAI Terminology and Definitions**
 
-1) XAI 방법론들의 목적
+1) XAI 방법론의 목적들
 - 설명성(Explainability): 모델 내부 동작 및 그 동작의 이유를 모델이 제공함
 - 해석성(Interpretability): 모델의 동작을 사람이 이해할 수 있음
 - 신뢰성(Trusworthiness): 모델이 의도/기대한 대로 동작할 것임을 확신할 수 있음
@@ -31,6 +31,9 @@ published: true
 - 견고성(Robustness): 의도적인 공격에 모델이 크게 영향을 받지 않음
 - 재현성(Reproducibility): 동일한 데이터셋에 대해 여러번 실행되었을 때 유사한 결과가 나옴
 - 확신성(Confidence): 모델이 내놓은 결과를 확신할 수 있는 지 여부를 정량적(확률적)으로 평가함
+
+  ![Fig. 2: XAI 방법론의 목적들의 상호 관계](https://AllAboutXAI.github.io/assets/img/xai/ts/2022-06-02-xai-ts-PaperReview_1_1.jpg)
+
 [Tim's Note] XAI 관련 용어는 표준적인 정의가 있다고 보기 어려움
 
 2) 안정성, 견고성, 확신성을 제공하는 XAI 방법론은 현재 없음
@@ -38,7 +41,3 @@ published: true
 3) 안정성(Stability)
 - 예를 들면 스티커가 붙어 있는 Stop 표지판을 잘 인식할 수 있어야 함
 - 정확하게 인식은 못하더라도 최소 확신성 값이 낮게 표시되는 등 추가적인 관련 정보를 제공할 수 있어야 함
-
-4) 
-
-  ![오디오 시각화](https://AllAboutXAI.github.io/assets/img/xai/ts/2022-06-02-xai-ts-PaperReview_1_1.jpg)

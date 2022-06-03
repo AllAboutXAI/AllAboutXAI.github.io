@@ -29,7 +29,7 @@ published: true
 - 해석성(Interpretability): 모델의 동작을 사람이 이해할 수 있음
 - 신뢰성(Trusworthiness): 모델이 의도/기대한 대로 동작할 것임을 확신할 수 있음
 - 상호작용성(Interactivity): 사람과 상호작용함
-- 안정성(Stability): 입력이나 모델에 작은 변화가 가해져도 모델이 크게 영향을 받지 않음
+- 안정성(Stability): 입력이나 모델에 작은 변화(perturbation)가 가해져도 모델이 크게 영향을 받지 않음
 - 견고성(Robustness): 의도적인 공격에 모델이 크게 영향을 받지 않음
 - 재현성(Reproducibility): 동일한 데이터셋에 대해 여러번 실행되었을 때 유사한 결과가 나옴
 - 확신성(Confidence): 모델이 내놓은 결과를 확신할 수 있는 지 여부를 정량적(확률적)으로 평가함
@@ -44,3 +44,19 @@ published: true
 3) 안정성(Stability)
 - 예를 들면 스티커가 붙어 있는 Stop 표지판을 잘 인식할 수 있어야 함
 - 정확하게 인식은 못하더라도 최소 확신성 값이 낮게 표시되는 등 추가적인 관련 정보를 제공할 수 있어야 함
+
+4) 확신성(Confidence)
+- 소음이나 작은 변화를 충분히 잘 다룰 수 있도록 모델을 훈련시키는 것 또는 필요한 데이터 샘플을 제공하는 것은 사실상 불가능한 일이므로 테스트 데이터 샘플이 훈련에 사용된 데이터들의 분포와 얼마나 다른지를 정량적으로 평가하여 이를 확신성 점수로 제시하는 방법을 고려해 볼 수 있음
+
+**3. XAI Techniques for Time Series**
+
+1) Post-hoc Methods
+- Post-hoc 방법은 입력(특성 값들)과 출력(예측 값) 사이의 관계를 추출해 모델의 동작에 가깝도록 함
+  --> Post-hoc 방법들에는 모델 애그노스틱(Model-agnostic)과 모델 특화(Model-specific) 방법이 있음
+- 이 논문에서 설명하는 시계열 데이터에 대한 Post-hoc XAI 방법은 모두 CNN 기반 
+  --> 백프로퍼케이션(back-propagation) 기반 방법과 작은 변화(perturbation) 기반 방법이 있음
+  
+2) Ante-hoc Methods
+- 모델 안에 설명과 관련된 정보가 함께 포함됨
+
+3) XAI for CNN

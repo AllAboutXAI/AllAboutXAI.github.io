@@ -32,7 +32,7 @@ published: true
 - 재현성(Reproducibility): 동일한 데이터셋에 대해 여러번 실행되었을 때 유사한 결과가 나옴
 - 확신성(Confidence): 모델이 내놓은 결과를 확신할 수 있는 지 여부를 정량적(확률적)으로 평가함
 
-  ![Fig. 2: XAI 방법론의 목적들의 상호 관계](https://AllAboutXAI.github.io/assets/img/xai/ts/2022-06-02-xai-ts-PaperReview_1_1.jpg)
+  ![Fig. 2: XAI 방법론의 목적들의 상호 관계](https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-02-xai-ts-PaperReview_1_1.jpg)
 
 [Tim's Note] XAI 관련 용어는 표준적인 정의가 있다고 보기 어려움
 

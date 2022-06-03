@@ -22,6 +22,8 @@ published: true
 
 **2. XAI Terminology and Definitions**
 
+[Tim's Note] XAI 관련 용어는 표준적인 정의가 있다고 보기 어려움
+
 1) XAI 방법론의 목적들
 - 설명성(Explainability): 모델 내부 동작 및 그 동작의 이유를 모델이 제공함
 - 해석성(Interpretability): 모델의 동작을 사람이 이해할 수 있음
@@ -37,8 +39,6 @@ published: true
   <figcaption>Fig. 2: XAI 방법론의 목적들의 상호 관계</figcaption>
 </figure>
 <br>
-
-[Tim's Note] XAI 관련 용어는 표준적인 정의가 있다고 보기 어려움
 
 2) 안정성, 견고성, 확신성을 제공하는 XAI 방법론은 현재 없음
 

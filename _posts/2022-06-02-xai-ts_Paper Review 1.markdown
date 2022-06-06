@@ -65,3 +65,6 @@ published: true
   [Fawaz et al.](https://arxiv.org/pdf/1908.07319.pdf){:target="_blank"}
   [Oviedo et al.](https://www.nature.com/articles/s41524-019-0196-x.pdf?origin=ppub){:target="_blank"}
 - Gradient*Input
+  [Siddiquiet al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8695734){:target="_blank"} 
+  [Strodthoff et al.](https://arxiv.org/pdf/1806.07385.pdf){:target="_blank"}
+  [Cho et al.](https://arxiv.org/pdf/2004.12538.pdf){:target="_blank"}

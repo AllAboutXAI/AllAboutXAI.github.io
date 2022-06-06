@@ -54,9 +54,14 @@ published: true
 - Post-hoc 방법은 입력(특성 값들)과 출력(예측 값) 사이의 관계를 추출해 모델의 동작에 가깝도록 함
   --> Post-hoc 방법들에는 모델 애그노스틱(Model-agnostic)과 모델 특화(Model-specific) 방법이 있음
 - 이 논문에서 설명하는 시계열 데이터에 대한 Post-hoc XAI 방법은 모두 CNN 기반 
-  --> 백프로퍼케이션(back-propagation) 기반 방법과 작은 변화(perturbation) 기반 방법이 있음
+  --> 백프로퍼게이션(back-propagation) 기반 방법과 작은 변화(perturbation) 기반 방법이 있음
   
 2) Ante-hoc Methods
 - 모델 안에 설명과 관련된 정보가 함께 포함됨
 
-3) XAI for CNN
+3) Using "Backpropagation-based XAI for CNN" for Time Series
+- CAM (Class Activation Mapping) can highlight sub-sequences in the input time series that are maximally representative of a class.
+  [Wang et al.](https://arxiv.org/pdf/1611.06455.pdf?ref=https://githubhelp.com){:target="_blank"} 
+  [Fawaz et al.](https://arxiv.org/pdf/1908.07319.pdf){:target="_blank"}
+  [Oviedo et al.](https://www.nature.com/articles/s41524-019-0196-x.pdf?origin=ppub){:target="_blank"}
+- Gradient*Input

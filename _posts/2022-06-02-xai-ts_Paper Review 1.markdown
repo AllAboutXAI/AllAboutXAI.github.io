@@ -76,3 +76,11 @@ published: true
 5) Usng "Attention Mechanism" for Time Series Classification
 - Attention mechanisms can be used for time series classification [Karim al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8141873){:target="_blank"} or time series forecasting [Schockaert et al.](https://arxiv.org/ftp/arxiv/papers/2007/2007.12617.pdf){:target="_blank"}
 - Attention mechanisms are Ante-Hoc explainability methods
+
+6) Usng "SAX(Symbolic Aggregate Approximation), a Data Mining Approach," for Time Series Classification
+- SAX transforms the input time series into strings
+- [Senin and Malinchik](https://apps.dtic.mil/sti/pdfs/ADA603196.pdf){:target="_blank"} and [Le Nguyen et al](https://arxiv.org/pdf/1808.04022.pdf){:target="_blank"} extend SAX to perform time series classification
+
+7) Usng "Fuzzy Logic, a Data Mining Approach," for Time Series Forecasting/Prediction
+
+8) Explaining Models through Representative Examples for Time Series Classification

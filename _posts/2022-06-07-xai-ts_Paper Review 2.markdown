@@ -8,208 +8,113 @@ published: true
 ---
 [Original Paper Link](https://arxiv.org/pdf/2008.07993.pdf){:target="_blank"}
 
-**1. 오디오 데이터를 다루는 주요 Python 라이브러리**
+**1. Introduction**
 
-1) librosa --> 오디오 신호를 다루는 대표적인 라이브러리
-
-2) IPython.display.Audio --> 주피터 노트북에서 음악 실행 등을 할 때 사용
-
-3) 예제 코드 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_1.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_1.ipynb){:target="_blank"})
-
-> #librosa<br>
-> import librosa<br>
-> audio_data = 'rain.wav'<br>
-> x , sr = librosa.load(audio_data, sr=44100) --> wav 파일에서 오디오 데이터를 읽어들임 (numpy 배열과 샘플링 레이트 값을 리턴)<br>
-><br>
-> #IPython.display.Audio<br>
-> import IPython.display as ipd<br>
-> ipd.Audio(audio_data)<br>
-><br>
-> #오디오 시각화 예<br>
-> %matplotlib inline<br>
-> import matplotlib.pyplot as plt<br>
-> import librosa.display<br>
-> plt.figure(figsize=(14, 5))<br>
-> librosa.display.waveplot(x, sr=sr)<br>
-
-  ![오디오 시각화](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_1.jpg)
-
-**2. Spectrogram**
-
-1) Spectrogram은 신호의 세기(loudness)를 표현하는 방법 중 하나이다.
-
-2) x축은 시간, y축은 주파수이며, 보통 히트맵(heatmap)으로 표현된다.
-
-3) 아래는 librosa를 이용해 spectogram을 생성하고 보여주는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_2.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_2.ipynb){:target="_blank"}).
-
-> import librosa, librosa.display<br>
-> audio_data = 'rain.wav'<br>
-> x , sr = librosa.load(audio_data, sr=44100)<br>
-><br>
-> import matplotlib.pyplot as plt<br>
-> X = librosa.stft(x)<br>
-> Xdb = librosa.amplitude_to_db(abs(X))<br>
-> plt.figure(figsize=(14, 5))<br>
-> librosa.display.specshow(Xdb, sr=sr, x_axis='time', y_axis='hz')<br>
-> plt.colorbar()<br>
-
-  ![Spectrogram 표시](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_2.jpg)
-
-**3. 임의의 오디오 신호 생성 예**
-
-필요 시 아래 예와 같은 방법으로 임의의 오디오 신호를 생성할 수 있다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_3.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_3.ipynb){:target="_blank"}).
-
-> import numpy as np<br>
-> sr = 22050 # sample rate<br>
-> T = 5.0    # seconds<br>
-> t = np.linspace(0, T, int(T*sr), endpoint=False) # time variable<br>
-> x = 0.5 * np.sin(2 * np.pi * 220 * t)# pure sine wave at 220 Hz<br>
-> <br>
-> #Playing the audio<br>
-> import IPython.display as ipd<br>
-> ipd.Audio(x, rate=sr) # load a NumPy array<br>
-> <br>
-> #Saving the audio<br>
-> import soundfile<br>
-> soundfile.write('test_220.wav', x, sr)<br>
-
-**4. 오디오 신호 주요 특성(feature) 추출**
-
-1) 오디오 데이터에 DL을 적용함에 있어 특정 응용이나 성능 향상 등을 위해 데이터 전처리나 특성 추출이 선행되는 경우가 많다.
-
-**2) 분광 특성들(Spectral Features)**
-
-분광 특성은 주파수 기반 특성으로 시간 기반의 원(raw) 신호 데이터를 푸리에 변환(Fourier Transfrom)을 이용해 주파수 기반의 데이터로 변경한 후, 특정 필요(해석/분석/판단)에 사용될 수 있는 다양한 특성 값을 산출할 수 있다. 예를 들면 기본 주파수(fundamental freqeuncy), 주파수 요소(frequency components), 분광 중심(spectral centroid), 분광 플럭스(spectral flux), 분광 밀도(spectral density), 분광 롤오프(spectral roll-off) 등이다.
+1) PBPM(Predictive Business Process Monitoring)
+- 목적: 프로세스 운영 "성능을 높임"/"비용을 낮춤"
+- 이벤트 로그를 기반으로 동작
+- ML 기반의 전통적인 방법들이 가진 성능 한계를 DL를 통해 개선할 수는 있으나 DL은 설명성(explainability) 부족 문제가 있음
+  --> DL이 제공하는 결과(출력)의 근거가 없으면 이를 수용/이용하기 어려울 수 있음
   
-- **Spectral Centroid**
+2) DL architecture to deal with time series data
+- RNN 계열, CNN 계열, Transformers
+- Lack of interpretability
 
-	- 스팩트럼 에너지의 중심이 어떤 주파수에 위치해 있는지는 보여준다. 
-	- Spectral Centroid는 소리의 밝기(brightness)와 관계가 있다. 
-	- 이를 구하는 예는 다음과 같다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_4.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_4.ipynb){:target="_blank"})
+3) 시계열 데이터에 대한 XAI가 쉽지 않은 이유
+- 시계열 데이터는 직관적이지 않음 (사람에게도 시계열 데이터를 직관적으로 해석하는 것은 어려운 일일 때가 많음)
+- 현재까지 진행된 연구들은 입력의 어떤 부분(part)이 출력에 영향을 주는 지를 찾아내고 나타내는 것에 집중되어 있음
 
-> import librosa, librosa.display<br>
-> audio_data = 'rain.wav'<br>
-> x , sr = librosa.load(audio_data, sr=44100)<br>
-> <br>
-> import sklearn<br>
-> spectral_centroids = librosa.feature.spectral_centroid(x, sr=sr)[0]<br>
-> <br>
-> #Computing the time variable for visualization<br>
-> import matplotlib.pyplot as plt<br>
-> plt.figure(figsize=(12, 4))<br>
-> frames = range(len(spectral_centroids))<br>
-> t = librosa.frames_to_time(frames)<br>
-> <br>
-> #Normalising for visualisation<br>
-> def normalize(x, axis=0):<br>
->     return sklearn.preprocessing.minmax_scale(x, axis=axis)<br>
-> <br>
-> #Plotting the Spectral Centroid along the waveform<br>
-> librosa.display.waveplot(x, sr=sr, alpha=0.4)<br>
-> plt.plot(t, normalize(spectral_centroids), color='b')<br>
+**2. XAI Terminology and Definitions**
 
-  ![Spectral Centrold](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_3.jpg)
+[Tim's Note] XAI 관련 용어는 표준적인 정의가 있다고 보기 어려움
 
-- **Spectral Rolloff**
+1) XAI 방법론의 목적들
+- 설명성(Explainability): 모델 내부 동작 및 그 동작의 이유를 모델이 제공함
+- 해석성(Interpretability): 모델의 동작을 사람이 이해할 수 있음
+- 신뢰성(Trusworthiness): 모델이 의도/기대한 대로 동작할 것임을 확신할 수 있음
+- 상호작용성(Interactivity): 사람과 상호작용함
+- 안정성(Stability): 입력이나 모델에 작은 변화(perturbation)가 가해져도 모델이 크게 영향을 받지 않음
+- 견고성(Robustness): 의도적인 공격에 모델이 크게 영향을 받지 않음
+- 재현성(Reproducibility): 동일한 데이터셋에 대해 여러번 실행되었을 때 유사한 결과가 나옴
+- 확신성(Confidence): 모델이 내놓은 결과를 확신할 수 있는 지 여부를 정량적(확률적)으로 평가함
 
-	- Spectral RollOff는 주파수 대역에서 에너지의 누적치(accumulated magnitude)가 지정된 값에(보통 85%를 사용) 이르는 지점이다.
-	- 이를 구하는 예는 다음과 같다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_5.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_5.ipynb){:target="_blank"})
-    
+<figure>
+  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-02-xai-ts-PaperReview_1_1.jpg" alt="Fig 2" style="width:70%" class="center">
+  <figcaption>Fig. 2: XAI 방법론의 목적들의 상호 관계</figcaption>
+</figure>
 
-> import librosa, librosa.display<br>
-> audio_data = 'rain.wav'<br>
-> x , sr = librosa.load(audio_data, sr=44100)<br>
-> <br>
-> import sklearn<br>
-> spectral_rolloff = librosa.feature.spectral_centroid(x, sr=sr)[0]<br>
-> <br>
-> #Computing the time variable for visualization<br>
-> import matplotlib.pyplot as plt<br>
-> plt.figure(figsize=(12, 4))<br>
-> frames = range(len(spectral_rolloff))<br>
-> t = librosa.frames_to_time(frames)<br>
-> <br>
-> #Normalising for visualisation<br>
-> def normalize(x, axis=0):<br>
->     return sklearn.preprocessing.minmax_scale(x, axis=axis)<br>
-> <br>
-> #Plotting the Spectral Rolloff along the waveform<br>
-> librosa.display.waveplot(x, sr=sr, alpha=0.4)<br>
-> plt.plot(t, normalize(spectral_rolloff), color='b')<br>
+2) 안정성, 견고성, 확신성을 제공하는 XAI 방법론은 현재 없음
 
-  ![Spectral Rolloff](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_4.jpg)
+3) 안정성(Stability)
+- 예를 들면 스티커가 붙어 있는 Stop 표지판을 잘 인식할 수 있어야 함
+- 정확하게 인식은 못하더라도 최소 확신성 값이 낮게 표시되는 등 추가적인 관련 정보를 제공할 수 있어야 함
 
-- **Spectral Bandwidth**
+4) 확신성(Confidence)
+- 소음이나 작은 변화를 충분히 잘 다룰 수 있도록 모델을 훈련시키는 것 또는 필요한 데이터 샘플을 제공하는 것은 사실상 불가능한 일이므로 테스트 데이터 샘플이 훈련에 사용된 데이터들의 분포와 얼마나 다른지를 정량적으로 평가하여 이를 확신성 점수로 제시하는 방법을 고려해 볼 수 있음
 
-	- Spectral Bandwidth는 피크 최대(peak maximum)의 절반이 되는 지점에서의 대역 넓이로 정의된다.
+**3. XAI Techniques for Time Series**
 
-  ![Spectral Bandwidth Definition](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_5.jpg)    
+1) Post-hoc Methods
+- Post-hoc 방법은 입력(특성 값들)과 출력(예측 값) 사이의 관계를 추출해 모델의 동작에 가깝도록 함
+  --> Post-hoc 방법들에는 모델 애그노스틱(Model-agnostic)과 모델 특화(Model-specific) 방법이 있음
+- 이 논문에서 설명하는 시계열 데이터에 대한 Post-hoc XAI 방법은 모두 CNN 기반 
+  --> 백프로퍼게이션(back-propagation) 기반 방법과 작은 변화(perturbation) 기반 방법이 있음
+  
+2) Ante-hoc Methods
+- 모델 안에 설명과 관련된 정보가 함께 포함됨
 
-	- 다음은 order-p Spectral Bandwidth를 구하는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_6.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_6.ipynb){:target="_blank"})
+3) Using "Backpropagation-based XAI for CNN" for Time Series Classification
+- CAM (Class Activation Mapping) can highlight sub-sequences in the input time series that are maximally representative of a class.
+  [Wang et al.](https://arxiv.org/pdf/1611.06455.pdf?ref=https://githubhelp.com){:target="_blank"} 
+  [Fawaz et al.](https://arxiv.org/pdf/1908.07319.pdf){:target="_blank"}
+  [Oviedo et al.](https://www.nature.com/articles/s41524-019-0196-x.pdf?origin=ppub){:target="_blank"}
+- Gradient*Input
+  [Siddiqui et al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8695734){:target="_blank"} 
+  [Strodthoff et al.](https://arxiv.org/pdf/1806.07385.pdf){:target="_blank"}
+  [Cho et al.](https://arxiv.org/pdf/2004.12538.pdf){:target="_blank"}
+  
+4) Using "Perturbation-based XAI for CNN" for Time Series Classification
+- Perturbation-based methods directly compute the contribution of the input features by removing, masking, or altering them, running a forward pass on the new input, and measuring the difference with the original input.
+- can be used for both classification and regression tasks.
 
-> import librosa, librosa.display<br>
-> audio_data = 'rain.wav'<br>
-> x , sr = librosa.load(audio_data, sr=44100)<br>
-> <br>
-> import sklearn<br>
-> spectral_bandwidth_2 = librosa.feature.spectral_bandwidth(x+0.01, sr=sr)[0]<br>
-> spectral_bandwidth_3 = librosa.feature.spectral_bandwidth(x+0.01, sr=sr, p=3)[0]<br>
-> spectral_bandwidth_4 = librosa.feature.spectral_bandwidth(x+0.01, sr=sr, p=4)[0]<br>
-> <br>
-> #Computing the time variable for visualization<br>
-> import matplotlib.pyplot as plt<br>
-> plt.figure(figsize=(15, 9))<br>
-> frames = range(len(spectral_bandwidth_2))<br>
-> t = librosa.frames_to_time(frames)<br>
-> <br>
-> #Normalising for visualisation<br>
-> def normalize(x, axis=0):<br>
->     return sklearn.preprocessing.minmax_scale(x, axis=axis)<br>
-> <br>
-> #Plotting the Spectral Bandwidth along the waveform<br>
-> librosa.display.waveplot(x, sr=sr, alpha=0.4)<br>
-> plt.plot(t, normalize(spectral_bandwidth_2), color='r')<br>
-> plt.plot(t, normalize(spectral_bandwidth_3), color='g')<br>
-> plt.plot(t, normalize(spectral_bandwidth_4), color='y')<br>
-> plt.legend(('p = 2', 'p = 3', 'p = 4'))<br>
+5) Usng "Attention Mechanism" for Time Series Classification
+- Attention mechanisms can be used for time series classification [Karim al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8141873){:target="_blank"} or time series forecasting [Schockaert et al.](https://arxiv.org/ftp/arxiv/papers/2007/2007.12617.pdf){:target="_blank"}
+- Attention mechanisms are Ante-Hoc explainability methods.
 
-  ![Spectral Bandwidth](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_6.jpg)
+6) Usng "SAX(Symbolic Aggregate Approximation), a Data Mining Approach," for Time Series Classification
+- SAX transforms the input time series into strings.
+- [Senin and Malinchik](https://apps.dtic.mil/sti/pdfs/ADA603196.pdf){:target="_blank"} and [Le Nguyen et al](https://arxiv.org/pdf/1808.04022.pdf){:target="_blank"} extend SAX to perform time series classification
 
-- **MFCCs(Mel-Frequency Cepstral Coefficients)**
+7) Usng "Fuzzy Logic, a Data Mining Approach," for Time Series Forecasting/Prediction
 
-	- 소리에 대한 인간의 인지적 특성을 반영한 Mel 스케일에 따라 STFT의 스펙트럼 크기를 변환한 것이다
+8) Explaining Models through Representative Examples for Time Series Classification
 
-	- 다음은 MFCCs를 구하는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_7.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_7.ipynb){:target="_blank"})
+**4. Explanations Scale**
 
-    
-> import librosa, librosa.display<br>
-> audio_data = 'rain.wav'<br>
-> x , sr = librosa.load(audio_data, sr=44100)<br>
-> <br>
-> mfccs = librosa.feature.mfcc(x, sr)<br>
-> <br>
-> #Displaying the MFCCs<br>
-> import matplotlib.pyplot as plt<br>
-> plt.figure(figsize=(15, 7))<br>
-> librosa.display.specshow(mfccs, sr=sr, x_axis='time')<br>
+1) The explanations are qualified as local when they are valid for a specific sample, and as global when they are valid for a set of samples or for the entire dataset.
 
-  ![MFCCs](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_7.jpg)
+2) Local Explanations
+- XAI methods for CNN naturally produce local explanations.
+- For RNN, the explanations are local if the internal states represent one instance, or global if the internal states represent several instances.
 
-- **Chroma Feature**
+3) Global Explanations
+- Some papers extend the methods generating local explanations to produce global explanations.
+- Some methods provide global explanations through the usage of clustering.
 
-	- Chroma Feature(또는 Vector)는 신호에 각 음 높이, {C, C#, D, D#, E, ..., B}, 에 얼만큼의 에너지가 존재하는지를 식별하는 12 항목 특성 벡터이다.
+**5. Evaluating Explanations**
 
-	- 다음은 Chroma Feature를 구하는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_8.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_8.ipynb){:target="_blank"})
-    
-> import librosa, librosa.display<br>
-> audio_data = 'rain.wav'<br>
-> x , sr = librosa.load(audio_data, sr=44100)<br>
-> <br>
-> chromagram = librosa.feature.chroma_stft(x, sr=sr)<br>
-> <br>
-> #Displaying the Chroma Feature<br>
-> import matplotlib.pyplot as plt<br>
-> plt.figure(figsize=(15, 5))<br>
-> librosa.display.specshow(chromagram, x_axis='time', y_axis='chroma', cmap='coolwarm')<br>
+1) This is about how to assess the quality of explanations.
 
-  ![Chroma Feature](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_8.jpg)
+2) Qualitative Evaluations
+- It could be by domain experts.
+- But, the unintuitive nature of time series make it difficult even for domain experts to qualitatively assess the quality of the explanations generated.
+
+3) Quantiative Evaluations
+- [Tonekaboni et al.](https://openreview.net/pdf?id=HygDF1rYDB){:target="_blank"}, [Cho et al.](https://arxiv.org/pdf/2004.12538.pdf){:target="_blank"}
+- [Arnout et al.](https://arxiv.org/pdf/1909.07082.pdf){:target="_blank"} propose two new quantitative evaluation methods to overcome the limitations of the perturbation approach, which has a lack of evaluation of trends or patterns in the time series.
+
+**6. Discussion**
+
+1) Most methods presented in this survey indicate which specific regions of the input data get attention from the model while classification is performed. They do not provide any confidence in the model, neither mitigates its vulnerabilities.
+
+2) However, the trust brought by these methods can be questioned by the unintuitive aspect of time series.

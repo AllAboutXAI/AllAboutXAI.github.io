@@ -70,17 +70,29 @@ published: true
   [Cho et al.](https://arxiv.org/pdf/2004.12538.pdf){:target="_blank"}
   
 4) Using "Perturbation-based XAI for CNN" for Time Series Classification
-- Perturbation-based methods directly compute the contribution of the input features by removing, masking, or altering them, running a forward pass on the new input, and measuring the difference with the original input
-- can be used for both classification and regression tasks
+- Perturbation-based methods directly compute the contribution of the input features by removing, masking, or altering them, running a forward pass on the new input, and measuring the difference with the original input.
+- can be used for both classification and regression tasks.
 
 5) Usng "Attention Mechanism" for Time Series Classification
 - Attention mechanisms can be used for time series classification [Karim al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8141873){:target="_blank"} or time series forecasting [Schockaert et al.](https://arxiv.org/ftp/arxiv/papers/2007/2007.12617.pdf){:target="_blank"}
-- Attention mechanisms are Ante-Hoc explainability methods
+- Attention mechanisms are Ante-Hoc explainability methods.
 
 6) Usng "SAX(Symbolic Aggregate Approximation), a Data Mining Approach," for Time Series Classification
-- SAX transforms the input time series into strings
+- SAX transforms the input time series into strings.
 - [Senin and Malinchik](https://apps.dtic.mil/sti/pdfs/ADA603196.pdf){:target="_blank"} and [Le Nguyen et al](https://arxiv.org/pdf/1808.04022.pdf){:target="_blank"} extend SAX to perform time series classification
 
 7) Usng "Fuzzy Logic, a Data Mining Approach," for Time Series Forecasting/Prediction
 
 8) Explaining Models through Representative Examples for Time Series Classification
+
+**4. Explanations Scale**
+
+1) The explanations are qualified as local when they are valid for a specific sample, and as global when they are valid for a set of samples or for the entire dataset.
+
+2) Local Explanations
+- XAI methods for CNN naturally produce local explanations.
+- For RNN, the explanations are local if the internal states represent one instance, or global if the internal states represent several instances.
+
+3) Global Explanations
+- Some papers extend the methods generating local explanations to produce global explanations.
+- Some methods provide global explanations through the usage of clustering.

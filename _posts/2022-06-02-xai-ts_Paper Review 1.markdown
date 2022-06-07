@@ -59,12 +59,20 @@ published: true
 2) Ante-hoc Methods
 - 모델 안에 설명과 관련된 정보가 함께 포함됨
 
-3) Using "Backpropagation-based XAI for CNN" for Time Series
+3) Using "Backpropagation-based XAI for CNN" for Time Series Classification
 - CAM (Class Activation Mapping) can highlight sub-sequences in the input time series that are maximally representative of a class.
   [Wang et al.](https://arxiv.org/pdf/1611.06455.pdf?ref=https://githubhelp.com){:target="_blank"} 
   [Fawaz et al.](https://arxiv.org/pdf/1908.07319.pdf){:target="_blank"}
   [Oviedo et al.](https://www.nature.com/articles/s41524-019-0196-x.pdf?origin=ppub){:target="_blank"}
 - Gradient*Input
-  [Siddiquiet al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8695734){:target="_blank"} 
+  [Siddiqui et al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8695734){:target="_blank"} 
   [Strodthoff et al.](https://arxiv.org/pdf/1806.07385.pdf){:target="_blank"}
   [Cho et al.](https://arxiv.org/pdf/2004.12538.pdf){:target="_blank"}
+  
+4) Using "Perturbation-based XAI for CNN" for Time Series Classification
+- Perturbation-based methods directly compute the contribution of the input features by removing, masking, or altering them, running a forward pass on the new input, and measuring the difference with the original input
+- can be used for both classification and regression tasks
+
+5) Usng "Attention Mechanism" for Time Series Classification
+- Attention mechanisms can be used for time series classification [Karim al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8141873){:target="_blank"} or time series forecasting [Schockaert et al.](https://arxiv.org/ftp/arxiv/papers/2007/2007.12617.pdf){:target="_blank"}
+- Attention mechanisms are Ante-Hoc explainability methods

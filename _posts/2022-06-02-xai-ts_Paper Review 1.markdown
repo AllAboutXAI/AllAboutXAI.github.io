@@ -108,3 +108,7 @@ published: true
 3) Quantiative Evaluations
 - [Tonekaboni et al.](https://openreview.net/pdf?id=HygDF1rYDB){:target="_blank"}, [Cho et al.](https://arxiv.org/pdf/2004.12538.pdf){:target="_blank"}
 - [Arnout et al.](https://arxiv.org/pdf/1909.07082.pdf){:target="_blank"} propose two new quantitative evaluation methods to overcome the limitations of the perturbation approach, which has a lack of evaluation of trends or patterns in the time series.
+
+**6. Discussion**
+1) Most methods presented in this survey indicate which specific regions of the input data get attention from the model while classification is performed. They do not provide any confidence in the model, neither mitigates its vulnerabilities.
+2) However, the trust brought by these methods can be questioned by the unintuitive aspect of time series.

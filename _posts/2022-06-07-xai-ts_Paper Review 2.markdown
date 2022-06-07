@@ -11,36 +11,23 @@ published: true
 **1. Introduction**
 
 1) PBPM(Predictive Business Process Monitoring)
-- 목적: 프로세스 운영 "성능을 높임"/"비용을 낮춤"
-- 이벤트 로그를 기반으로 동작
-- ML 기반의 전통적인 방법들이 가진 성능 한계를 DL를 통해 개선할 수는 있으나 DL은 설명성(explainability) 부족 문제가 있음
-  --> DL이 제공하는 결과(출력)의 근거가 없으면 이를 수용/이용하기 어려울 수 있음
+- 목적: 프로세스 운영 "성능을 높임"/"비용을 낮춤".
+- 이벤트 로그를 기반으로 동작.
+- ML 기반의 전통적인 방법들이 가진 성능 한계를 DL를 통해 개선할 수는 있으나 DL은 설명성(explainability) 부족 문제가 있음.
+  --> DL이 제공하는 결과(출력)의 근거가 없으면 이를 수용/이용하기 어려울 수 있음.
+
+[Tim's Note] 시스템 로그 vs. 비지니스 이벤트 로그 and MES 로그
+비지니스 이벤트 로그 항목들 사이에는 강한 인과 관계가 존재하는 것으로 판단됨. 엄밀하게 말해 Syslog 같은 시스템 로그는 비지니스 이벤트 로그와는 다른 특성을 가진다고 생각됨. MES 트랜잭션 로그는 시스템 로그 보다는 비지니스 이벤트 로그에 가까울 것으로 생각됨.
   
-2) DL architecture to deal with time series data
-- RNN 계열, CNN 계열, Transformers
-- Lack of interpretability
+2) 본 연구는 LRP(Layer-wise Relevance Propagation)을 이용해 LSTM의 비지니스 프로세스 상의 다음 행위 예측(next activity prediction)을 설명 가능하게 만드는 방법을 제안함. 
 
-3) 시계열 데이터에 대한 XAI가 쉽지 않은 이유
-- 시계열 데이터는 직관적이지 않음 (사람에게도 시계열 데이터를 직관적으로 해석하는 것은 어려운 일일 때가 많음)
-- 현재까지 진행된 연구들은 입력의 어떤 부분(part)이 출력에 영향을 주는 지를 찾아내고 나타내는 것에 집중되어 있음
+**2. Background**
 
-**2. XAI Terminology and Definitions**
+1) Preliminaries
 
-[Tim's Note] XAI 관련 용어는 표준적인 정의가 있다고 보기 어려움
-
-1) XAI 방법론의 목적들
-- 설명성(Explainability): 모델 내부 동작 및 그 동작의 이유를 모델이 제공함
-- 해석성(Interpretability): 모델의 동작을 사람이 이해할 수 있음
-- 신뢰성(Trusworthiness): 모델이 의도/기대한 대로 동작할 것임을 확신할 수 있음
-- 상호작용성(Interactivity): 사람과 상호작용함
-- 안정성(Stability): 입력이나 모델에 작은 변화(perturbation)가 가해져도 모델이 크게 영향을 받지 않음
-- 견고성(Robustness): 의도적인 공격에 모델이 크게 영향을 받지 않음
-- 재현성(Reproducibility): 동일한 데이터셋에 대해 여러번 실행되었을 때 유사한 결과가 나옴
-- 확신성(Confidence): 모델이 내놓은 결과를 확신할 수 있는 지 여부를 정량적(확률적)으로 평가함
 
 <figure>
-  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-02-xai-ts-PaperReview_1_1.jpg" alt="Fig 2" style="width:70%" class="center">
-  <figcaption>Fig. 2: XAI 방법론의 목적들의 상호 관계</figcaption>
+  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-07-xai-ts-PaperReview_2_1.jpg" style="width:70%" class="center">
 </figure>
 
 2) 안정성, 견고성, 확신성을 제공하는 XAI 방법론은 현재 없음

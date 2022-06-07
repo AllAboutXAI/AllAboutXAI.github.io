@@ -25,7 +25,6 @@ published: true
 
 1) Preliminaries
 
-
 <figure>
   <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-07-xai-ts-PaperReview_2_1.jpg" style="width:70%" class="center">
 </figure>

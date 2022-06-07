@@ -96,3 +96,15 @@ published: true
 3) Global Explanations
 - Some papers extend the methods generating local explanations to produce global explanations.
 - Some methods provide global explanations through the usage of clustering.
+
+**5. Evaluating Explanations**
+
+1) This is about how to assess the quality of explanations.
+
+2) Qualitative Evaluations
+- It could be by domain experts.
+- But, the unintuitive nature of time series make it difficult even for domain experts to qualitatively assess the quality of the explanations generated.
+
+3) Quantiative Evaluations
+- [Tonekaboni et al.](https://openreview.net/pdf?id=HygDF1rYDB){:target="_blank"}, [Cho et al.](https://arxiv.org/pdf/2004.12538.pdf){:target="_blank"}
+- [Arnout et al.](https://arxiv.org/pdf/1909.07082.pdf){:target="_blank"} propose two new quantitative evaluation methods to overcome the limitations of the perturbation approach, which has a lack of evaluation of trends or patterns in the time series.

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: '[Paper Review] Vision'
-subtitle: Test 2
+title: '[Paper Review] 2021 - XNAP: Making LSTM-based Next Activity Predictions Explainable by Using LRP'
+subtitle: XAI on Time Series Data
 categories: xai
-tags: vs
+tags: ts
 published: true
 ---
-DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, Nagesh Singh Chauhan이 작성한 [Audio Data Analysis Using Deep Learning with Python (Part 1)](https://www.kdnuggets.com/2020/02/audio-data-analysis-deep-learning-python-part-1.html){:target="_blank"}의 내용을 기반으로 작성된 것이다.
+[Original Paper Link](https://arxiv.org/pdf/2008.07993.pdf){:target="_blank"}
 
 **1. 오디오 데이터를 다루는 주요 Python 라이브러리**
 

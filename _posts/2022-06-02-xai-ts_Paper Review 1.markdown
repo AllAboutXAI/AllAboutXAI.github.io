@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[Paper Review] Explainable Artificial Intelligence (XAI) on Time Series Data - A Survey'
+title: '[Paper Review] 2021- Explainable Artificial Intelligence (XAI) on Time Series Data - A Survey'
 subtitle: XAI on Time Series Data
 categories: xai
 tags: ts

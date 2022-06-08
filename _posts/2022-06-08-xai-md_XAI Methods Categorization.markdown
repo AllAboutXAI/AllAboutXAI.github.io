@@ -6,7 +6,7 @@ categories: xai
 tags: md
 published: true
 ---
-<References>
+**References**
 
 #1 [Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI](https://arxiv.org/pdf/1910.10045.pdf){:target="_blank"}
   

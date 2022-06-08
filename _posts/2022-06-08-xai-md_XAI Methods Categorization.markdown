@@ -6,7 +6,9 @@ categories: xai
 tags: md
 published: true
 ---
-[Original Paper Link](https://arxiv.org/pdf/2008.07993.pdf){:target="_blank"}
+References
+#1 [Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI](https://arxiv.org/pdf/1910.10045.pdf){:target="_blank"}
+#2 [Explainable AI: A Review of Machine Learning Interpretability Methods](https://www.mdpi.com/1099-4300/23/1/18){:target="_blank"}
 
 **1. Introduction**
 

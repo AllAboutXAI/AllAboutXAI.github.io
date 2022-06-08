@@ -2,7 +2,7 @@
 layout: tag-blog
 title: ML
 slug: ml
-category: dev
+category: ml_dl
 menu: false
 order: 1
 ---

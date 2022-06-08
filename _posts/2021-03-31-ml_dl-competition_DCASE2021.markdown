@@ -2,7 +2,7 @@
 layout: post
 title: '[Competition] DCASE2021'
 subtitle: DCASE2012
-categories: dev
+categories: ml_dl
 tags: competition ASD
 comments: true
 published: true

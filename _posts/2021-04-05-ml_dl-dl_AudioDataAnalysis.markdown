@@ -2,7 +2,7 @@
 layout: post
 title: '[자료] DL을 이용한 오디오 데이터 분석 #1'
 subtitle: Audio Data Analysis #1
-categories: dev
+categories: ml_dl
 tags: dl audio signal python
 published: true
 ---
@@ -14,7 +14,7 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 
 2) IPython.display.Audio --> 주피터 노트북에서 음악 실행 등을 할 때 사용
 
-3) 예제 코드 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_1.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_1.ipynb){:target="_blank"})
+3) 예제 코드 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_1.ipynb](https://colab.research.google.com/github/AllAboutXAI/AllAboutXAI.github.io/blob/master/code/Audio_Data_Analysis_Ex_1.ipynb){:target="_blank"})
 
 > #librosa<br>
 > import librosa<br>
@@ -32,7 +32,7 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 > plt.figure(figsize=(14, 5))<br>
 > librosa.display.waveplot(x, sr=sr)<br>
 
-  ![오디오 시각화](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_1.jpg)
+  ![오디오 시각화](https://AllAboutXAI.github.io/assets/img/ml_dl/dl/2021-04-05-dev-dl-AudioDataAnalysis_1.jpg)
 
 **2. Spectrogram**
 
@@ -40,7 +40,7 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 
 2) x축은 시간, y축은 주파수이며, 보통 히트맵(heatmap)으로 표현된다.
 
-3) 아래는 librosa를 이용해 spectogram을 생성하고 보여주는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_2.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_2.ipynb){:target="_blank"}).
+3) 아래는 librosa를 이용해 spectogram을 생성하고 보여주는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_2.ipynb](https://colab.research.google.com/github/AllAboutXAI/AllAboutXAI.github.io/blob/master/code/Audio_Data_Analysis_Ex_2.ipynb){:target="_blank"}).
 
 > import librosa, librosa.display<br>
 > audio_data = 'rain.wav'<br>
@@ -53,11 +53,11 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 > librosa.display.specshow(Xdb, sr=sr, x_axis='time', y_axis='hz')<br>
 > plt.colorbar()<br>
 
-  ![Spectrogram 표시](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_2.jpg)
+  ![Spectrogram 표시](https://AllAboutXAI.github.io/assets/img/ml_dl/dl/2021-04-05-dev-dl-AudioDataAnalysis_2.jpg)
 
 **3. 임의의 오디오 신호 생성 예**
 
-필요 시 아래 예와 같은 방법으로 임의의 오디오 신호를 생성할 수 있다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_3.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_3.ipynb){:target="_blank"}).
+필요 시 아래 예와 같은 방법으로 임의의 오디오 신호를 생성할 수 있다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_3.ipynb](https://colab.research.google.com/github/AllAboutXAI/AllAboutXAI.github.io/blob/master/code/Audio_Data_Analysis_Ex_3.ipynb){:target="_blank"}).
 
 > import numpy as np<br>
 > sr = 22050 # sample rate<br>
@@ -85,7 +85,7 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 
 	- 스팩트럼 에너지의 중심이 어떤 주파수에 위치해 있는지는 보여준다. 
 	- Spectral Centroid는 소리의 밝기(brightness)와 관계가 있다. 
-	- 이를 구하는 예는 다음과 같다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_4.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_4.ipynb){:target="_blank"})
+	- 이를 구하는 예는 다음과 같다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_4.ipynb](https://colab.research.google.com/github/AllAboutXAI/AllAboutXAI.github.io/blob/master/code/Audio_Data_Analysis_Ex_4.ipynb){:target="_blank"})
 
 > import librosa, librosa.display<br>
 > audio_data = 'rain.wav'<br>
@@ -108,12 +108,12 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 > librosa.display.waveplot(x, sr=sr, alpha=0.4)<br>
 > plt.plot(t, normalize(spectral_centroids), color='b')<br>
 
-  ![Spectral Centrold](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_3.jpg)
+  ![Spectral Centrold](https://AllAboutXAI.github.io/assets/img/ml_dl/dl/2021-04-05-dev-dl-AudioDataAnalysis_3.jpg)
 
 - **Spectral Rolloff**
 
 	- Spectral RollOff는 주파수 대역에서 에너지의 누적치(accumulated magnitude)가 지정된 값에(보통 85%를 사용) 이르는 지점이다.
-	- 이를 구하는 예는 다음과 같다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_5.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_5.ipynb){:target="_blank"})
+	- 이를 구하는 예는 다음과 같다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_5.ipynb](https://colab.research.google.com/github/AllAboutXAI/AllAboutXAI.github.io/blob/master/code/Audio_Data_Analysis_Ex_5.ipynb){:target="_blank"})
     
 
 > import librosa, librosa.display<br>
@@ -137,15 +137,15 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 > librosa.display.waveplot(x, sr=sr, alpha=0.4)<br>
 > plt.plot(t, normalize(spectral_rolloff), color='b')<br>
 
-  ![Spectral Rolloff](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_4.jpg)
+  ![Spectral Rolloff](https://AllAboutXAI.github.io/assets/img/ml_dl/dl/2021-04-05-dev-dl-AudioDataAnalysis_4.jpg)
 
 - **Spectral Bandwidth**
 
 	- Spectral Bandwidth는 피크 최대(peak maximum)의 절반이 되는 지점에서의 대역 넓이로 정의된다.
 
-  ![Spectral Bandwidth Definition](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_5.jpg)    
+  ![Spectral Bandwidth Definition](https://AllAboutXAI.github.io/assets/img/ml_dl/dl/2021-04-05-dev-dl-AudioDataAnalysis_5.jpg)    
 
-	- 다음은 order-p Spectral Bandwidth를 구하는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_6.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_6.ipynb){:target="_blank"})
+	- 다음은 order-p Spectral Bandwidth를 구하는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_6.ipynb](https://colab.research.google.com/github/AllAboutXAI/AllAboutXAI.github.io/blob/master/code/Audio_Data_Analysis_Ex_6.ipynb){:target="_blank"})
 
 > import librosa, librosa.display<br>
 > audio_data = 'rain.wav'<br>
@@ -173,13 +173,13 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 > plt.plot(t, normalize(spectral_bandwidth_4), color='y')<br>
 > plt.legend(('p = 2', 'p = 3', 'p = 4'))<br>
 
-  ![Spectral Bandwidth](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_6.jpg)
+  ![Spectral Bandwidth](https://AllAboutXAI.github.io/assets/img/ml_dl/dl/2021-04-05-dev-dl-AudioDataAnalysis_6.jpg)
 
 - **MFCCs(Mel-Frequency Cepstral Coefficients)**
 
 	- 소리에 대한 인간의 인지적 특성을 반영한 Mel 스케일에 따라 STFT의 스펙트럼 크기를 변환한 것이다
 
-	- 다음은 MFCCs를 구하는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_7.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_7.ipynb){:target="_blank"})
+	- 다음은 MFCCs를 구하는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_7.ipynb](https://colab.research.google.com/github/AllAboutXAI/AllAboutXAI.github.io/blob/master/code/Audio_Data_Analysis_Ex_7.ipynb){:target="_blank"})
 
     
 > import librosa, librosa.display<br>
@@ -193,13 +193,13 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 > plt.figure(figsize=(15, 7))<br>
 > librosa.display.specshow(mfccs, sr=sr, x_axis='time')<br>
 
-  ![MFCCs](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_7.jpg)
+  ![MFCCs](https://AllAboutXAI.github.io/assets/img/ml_dl/dl/2021-04-05-dev-dl-AudioDataAnalysis_7.jpg)
 
 - **Chroma Feature**
 
 	- Chroma Feature(또는 Vector)는 신호에 각 음 높이, {C, C#, D, D#, E, ..., B}, 에 얼만큼의 에너지가 존재하는지를 식별하는 12 항목 특성 벡터이다.
 
-	- 다음은 Chroma Feature를 구하는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_8.ipynb](https://colab.research.google.com/github/AIWithDaddy/AIWithDaddy.github.io/blob/master/code/Audio_Data_Analysis_Ex_8.ipynb){:target="_blank"})
+	- 다음은 Chroma Feature를 구하는 예이다 (Colab에서 실행 --> [Audio_Data_Analysis_Ex_8.ipynb](https://colab.research.google.com/github/AllAboutXAI/AllAboutXAI.github.io/blob/master/code/Audio_Data_Analysis_Ex_8.ipynb){:target="_blank"})
     
 > import librosa, librosa.display<br>
 > audio_data = 'rain.wav'<br>
@@ -212,4 +212,4 @@ DL을 이용해 오디오 데이터를 분석하는 것에 대한 자료이며, 
 > plt.figure(figsize=(15, 5))<br>
 > librosa.display.specshow(chromagram, x_axis='time', y_axis='chroma', cmap='coolwarm')<br>
 
-  ![Chroma Feature](https://AIWithDaddy.github.io/assets/img/dev/dl/2021-04-05-dev-dl-AudioDataAnalysis_8.jpg)
+  ![Chroma Feature](https://AllAboutXAI.github.io/assets/img/ml_dl/dl/2021-04-05-dev-dl-AudioDataAnalysis_8.jpg)

@@ -1,10 +1,10 @@
 ---
 layout: list
-title: XAI
-slug: xai
+title: ML/DL
+slug: mldl
 menu: true
 submenu: true
-order: 1
+order: 2
 description: >
-  XAI 관련
+  ML/DL 관련  
 ---

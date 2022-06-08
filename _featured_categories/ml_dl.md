@@ -1,7 +1,7 @@
 ---
 layout: list
 title: ML/DL
-slug: mldl
+slug: ml_dl
 menu: true
 submenu: true
 order: 2

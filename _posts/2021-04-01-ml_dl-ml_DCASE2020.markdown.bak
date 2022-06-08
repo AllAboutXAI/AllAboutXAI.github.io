@@ -27,7 +27,7 @@ DCASE는 Detection and Classification of Acoustic Scenes and Events의 약자로
   - MIMII --> Valve, Pump, Fan, Slide ([해당 데이터셋에 대한 설명 자료](http://dcase.community/documents/workshop2019/proceedings/DCASE2019Workshop_Purohit_21.pdf){:target="_blank"})
   - 대상 장비의 동작 소리(operating sound)를 배경 소음(environmental noise, 실제 공장에서 녹음된 소음)와 합쳐서 학습과 테스트 데이터로 제공
 
-![데이터셋 전체의 개요](https://AllAboutXAI.github.io/assets/img/ml_dl/ml/2021-04-01-dev-ml-dcase2020.jpg)  
+![데이터셋 전체의 개요](https://AIWithDaddy.github.io/assets/img/dev/ml/2021-04-01-dev-ml-dcase2020.jpg)  
 
   - 데이테셋은 총 6개의 장비 종류에 대한 데이터이며 장비 종류 별로 다른 ID를 가지는 장비들의 데이터가 포함되어 있다.
   - 개발을 위한 데이터셋(development dataset)은 학습 데이터와 테스트 데이터로 구성되어 있는데, 학습 데이터에는 1000개 정도의 정상 소리 데이터가, 테스트 데이터에는 100에서 200개의 정상, 비정상 소리 데이터가 포함되어 있다.

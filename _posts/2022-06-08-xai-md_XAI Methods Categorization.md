@@ -19,17 +19,12 @@ published: true
 - 투명성: 모델이 동작하는 메커니즘을 바로 이해할 수 있어야 함
 - 의료, 자율 주행, 금융, 보안 등에서 모델의 투명성이 중요함
 
-[Tim's Note] 시스템 로그 vs. 비지니스 이벤트 로그 and MES 로그
-비지니스 이벤트 로그 항목들 사이에는 강한 인과 관계가 존재하는 것으로 판단됨. 엄밀하게 말해 Syslog 같은 시스템 로그는 비지니스 이벤트 로그와는 다른 특성을 가진다고 생각됨. MES 트랜잭션 로그는 시스템 로그 보다는 비지니스 이벤트 로그에 가까울 것으로 생각됨.
-  
-2) 본 연구는 LRP(Layer-wise Relevance Propagation)을 이용해 LSTM의 비지니스 프로세스 상의 다음 행위 예측(next activity prediction)을 설명 가능하게 만드는 방법을 제안함. 
+**2. Taxonomy**
 
-**2. Background**
+1) Interpretability(해석가능성)
+- 수동적인 관점에서 정의하는 것으로 모델이 사람에 의해 해석되는 정도를 말하는 것임 (refers to a passive characteristic of a model referring to the level at which a given model makes sense for a human observer).
 
-1) Preliminaries
+2) Explainability(설명가능성)
+- 능동적인 관점에서 정의하는 것으로 모델이 내부 동작을 설명하는 정도를 말하는 것임 (denoting any action or procedure taken by a model with the intent of clarifying or detailing its internal functions).
 
-<figure>
-  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-07-xai-ts-PaperReview_2_1.jpg" style="width:80%" class="center">
-</figure>
-
-2) LRP for LSTM
+[Tim's Note] Reference #1이 Interpretability와 Explainability 및 유사 용어를 해당 논문 2장에서 설명하고 있는데, 명확하지가 않음(언어 능력 부족에서 기인한 것일 수 있음 ^^). 저자들은 Transparency를 Interpretability와 연관짓고 있는데, Explainability와 연관되는 것으로 생각됨. 다시말해 스스로 설명을 제공할 수 있어야 Transparent Model이라고 분류될 수 있다고 판단됨.

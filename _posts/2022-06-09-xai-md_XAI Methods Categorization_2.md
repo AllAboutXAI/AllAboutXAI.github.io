@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[용어] Interpretability와 Exaplainability'
+title: 'XAI Methods Categorization'
 subtitle: XAI Method
 categories: xai
 tags: md
@@ -28,10 +28,10 @@ published: true
 
 4) 1)은 Post-hoc XAI, 2)는 Ante-hoc XAI로 연결되는 것이 맞다고 생각되나, Reference #1은 2.2의 결론에서 반대로 정의함
 
-[Tim's Note] Interpretability와 Explainability는 여전히 혼돈을 주는 용어라고 판단이 되며, 내재 Intrinsic(Ante-hoc) 설명가능성과 사후(Post-hoc) 설명가능성이라는 용어가 가장 적절한 것으로 판단됨(Reference #2의 입장). 여기서 사후란 학습 이후 생성된 모델을 대상으로 설명가능성을 추가/정의한다는 의미임.
+[Tim's Note] Interpretability와 Explainability는 여전히 혼돈을 주는 용어라고 판단이 되며, 내재 Intrinsic(Ante-hoc) 설명가능성과 사후(Post-hoc) 설명가능성이라는 용어가 가장 적절한 것으로 판단됨.
 
 **References**
 
 #1 [Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI](https://arxiv.org/pdf/1910.10045.pdf){:target="_blank"}
   
-#2 [3.2 Taxonomy of Interpretability Methods](https://christophm.github.io/interpretable-ml-book/taxonomy-of-interpretability-methods.html){:target="_blank"} in Interpretable Machine Learning: A Guide for Making Black Box Models Explainable, 2nd Edition
+##2 [Explainable AI: A Review of Machine Learning Interpretability Methods](https://www.mdpi.com/1099-4300/23/1/18){:target="_blank"}

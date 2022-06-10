@@ -37,7 +37,7 @@ published: true
 
 2) Model-agnostic and Model-specific Methods
 
-3) <span style="color: blue;">Model-agnositic Post-hoc Method 1:</span> <span style="color: red;">Explanation by Simplication</span>
+3) <span style="color: blue;">Model-agnositic Post-hoc Method 1:</span> <span style="color: red;">Explanation by Simplification</span>
 - Almost all techniques taking this path for model simplification are based on rule extraction techniques.
 - <span style="font-weight:bold">LIME</span>(Local Interpretable Model-agnostic Explanations) builds locally linear models around the predictions of an opaque model to explain it.
 - G-REX, etc
@@ -51,7 +51,7 @@ published: true
 
 6) <span style="color: green;">Post-hoc Method for Shallow ML Model 1:</span> <span style="color: red;">Tree Ensembles, Random Forests</span>
 - Tree Ensemble: To circumvent the issue of single tree's overfitting 
-- Methods Using "Explanation by Simplication" and/or "Feature Relevance Exaplanation"
+- Methods Using "Explanation by Simplification" and/or "Feature Relevance Exaplanation"
 
 7) <span style="color: green;">Post-hoc Method for Shallow ML Model 2:</span> <span style="color: red;">Support Vector Machine</span>
 - Post-hoc explainability applied to SVMs covers explanation by simplification, local explanations, visualizations and explanations by example.

@@ -15,11 +15,29 @@ published: true
 - Simulatability나 Decomposability가 어떤 의미가 있는지 모르겠음. 
 - Transparent Model이라고 하면 보통 Algorithmic Transparency를 이야기하는 것으로 생각됨. Algorithmic Transparency를 가지는 예 --> 선형 모델
 
+3) Linear/Logistic Regression
+- "Logistic Regression is a classification model to predict a dependent variable(category) that is dichotomous(binary). Howerver, when the dependent variable is continuous, linear regression would be its homonym."
+- Explanation Using Statistics, Visualization
+
+4) Decision Trees
+- Resgression, Classification
+ 
+5) K-Nearest Neighbors(KNN)
+- Classification, Regression
+
+6) Rlue-based Learning
+
+7) General Additive Models
+
+8) Bayesian Models
+
 **2. Post-hoc Explainability**
 
 1) 여러 방법들이 가능함: Text Explanation, Visual Explanation, Local Explanation, Explanation by Example, Explanation by Simplification, Feature Relevance Explanation --> 사람들이 어떤 것을 설명하는 방식들임.
 
-2) 
+2) Model-agnostic and Model-specific Methods
+
+3) Model-agnositic Post-hoc Method 1: <span style="color: red;">Explanation by Simplication</span>
 
 **References**
 

@@ -56,9 +56,15 @@ published: true
 7) <span style="color: green;">Post-hoc Method for Shallow ML Model 2:</span> <span style="color: red;">Support Vector Machine</span>
 - Post-hoc explainability applied to SVMs covers explanation by simplification, local explanations, visualizations and explanations by example.
 
-8) <span style="color: yellow">Post-hoc Method for DL 1:</span> <span style="color: red;">Multi-layer NN</span>
-- Post-hoc explainability applied to SVMs covers explanation by simplification, local explanations, visualizations and explanations by example.
+8) <span style="color: magenta">Post-hoc Method for DL 1:</span> <span style="color: red;">Multi-layer NN(MLP)</span>
+- Model Simplification Method: DeepRED, etc
+- Feature Revelavnce Method: DeepLIFT, etc
 
+9) <span style="color: magenta">Post-hoc Method for DL 2:</span> <span style="color: red;">CNN</span>
+- Two major approaches: 1) Those that try to understand the decision process by mapping back the output in the input space to see which parts of the input were discriminative for the output, 2) Those that try to delve inside the network and interpret how the intermediate layers see the external world, not necessarily related to any specific input, but in general.
+- Approach 1: CAM(Class Activation Map), Heatmap Usinig LRP, Grad-CAM(Gradient-weighted CAM)
+- Approach 2: A Method Reconstructing the Visual Information Contained Inside the CNN
+- Others: Text Explanation(e.g. combining a CNN feature exatractor with an RNN attention model)
 
 **References**
 

@@ -62,9 +62,15 @@ published: true
 
 9) <span style="color: magenta">Post-hoc Method for DL 2:</span> <span style="color: red;">CNN</span>
 - Two major approaches: 1) Those that try to understand the decision process by mapping back the output in the input space to see which parts of the input were discriminative for the output, 2) Those that try to delve inside the network and interpret how the intermediate layers see the external world, not necessarily related to any specific input, but in general.
-- Approach 1: CAM(Class Activation Map), Heatmap Usinig LRP, Grad-CAM(Gradient-weighted CAM)
+- Approach 1: CAM(Class Activation Map), Heatmap Usinig LRP, Grad-CAM(Gradient-weighted CAM), Attribution
 - Approach 2: A Method Reconstructing the Visual Information Contained Inside the CNN
-- Others: Text Explanation(e.g. combining a CNN feature exatractor with an RNN attention model)
+- Others: Text Explanation(e.g. combining a CNN feature exatractor with an RNN attention model), Using LIME
+- Visualization mixed with feature relevance methods are the most adopted approach to explainability in CNNs
+
+10) <span style="color: magenta">Post-hoc Method for DL 3:</span> <span style="color: red;">RNN</span>
+- Two major approaches: 1) explainability by understanding what a RNN model has learned (mainly via feature relevance methods, 2) explainability by modifying RNN architectures to provide insights about the decisions they make (local explanations)
+- Approach 1: Using LRP, Etc
+- Approach 2: RETAIN, Etc
 
 **References**
 

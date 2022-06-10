@@ -38,6 +38,16 @@ published: true
 2) Model-agnostic and Model-specific Methods
 
 3) Model-agnositic Post-hoc Method 1: <span style="color: red;">Explanation by Simplication</span>
+- Almost all techniques taking this path for model simplification are based on rule extraction techniques.
+- <span style="font-weight:bold">LIME</span>(Local Interpretable Model-agnostic Explanations) builds locally linear models around the predictions of an opaque model to explain it.
+- G-REX, etc
+
+4) Model-agnositic Post-hoc Method 2: <span style="color: red;">Feature Relevance Explanation</span>
+- aims to describe the functioning of an opaque model by ranking or measuring the influence, relevance or importance each feature has in the prediction output by the model to be explained.
+- <span style="font-weight:bold">SHAP</span>(SHapley Additive exPlanations)
+- Etc
+
+5) Model-agnositic Post-hoc Method 3: <span style="color: red;">Visual Explanation</span>
 
 **References**
 

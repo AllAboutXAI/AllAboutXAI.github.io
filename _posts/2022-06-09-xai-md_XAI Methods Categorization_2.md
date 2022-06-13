@@ -13,7 +13,7 @@ published: true
 2) 개인적으로 Reference 3의  Mind-map이 전체적인 그림을 잘 보여주는 버전이라고 생각함.
 
 <figure>
-  <img src="https://AllAboutXAI.github.io/assets/img/XAI/md/2022-06-09-xai-md-XAI Method Categorization_2_1" alt="Fig 2" style="width:70%" class="center">
+  <img src="https://AllAboutXAI.github.io/assets/img/XAI/md/2022-06-09-xai-md-XAI Method Categorization_2_1.jpg" alt="Fig 2" style="width:70%" class="center">
   <figcaption>Fig. 2: Taxonomy mind-map of Machine Learning Interpretability Techniques</figcaption>
 </figure>
 

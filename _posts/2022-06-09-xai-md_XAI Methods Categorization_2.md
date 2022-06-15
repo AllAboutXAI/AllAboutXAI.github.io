@@ -50,7 +50,7 @@ published: true
 
 3) <span style="color: blue;">Model-agnositic Post-hoc Method 1:</span> <span style="color: red;">Explanation by Simplification</span>
 - Almost all techniques taking this path for model simplification are based on rule extraction techniques.
-- <span style="font-weight:bold">LIME</span>(Local Interpretable Model-agnostic Explanations) builds locally linear models around the predictions of an opaque model to explain it.
+- <span style="font-weight:bold">LIME</span>(Local Interpretable Model-agnostic Explanations) builds locally linear models around the predictions of an opaque model to explain it. LIME is a local surrogate method.
 - G-REX, etc
 
 4) <span style="color: blue;">Model-agnositic Post-hoc Method 2:</span> <span style="color: red;">Feature Relevance Explanation</span>

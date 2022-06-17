@@ -59,7 +59,7 @@ published: true
 </figure>
 - 실행(분석)예
 <figure>
-  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-16-xai-ts-PaperReview_2_3.jpg" style="width:80%" class="center">
+  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-16-xai-ts-PaperReview_2_3.jpg" style="width:100%" class="center">
   <figcaption>Fig. 3: Activity relevances of XNAP's LRP.</figcaption>
 </figure>
 

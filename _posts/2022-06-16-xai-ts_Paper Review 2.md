@@ -7,6 +7,7 @@ tags: ts
 published: true
 ---
 [Original Paper Link](https://arxiv.org/pdf/2008.07993.pdf){:target="_blank"}
+[Github Link](https://github.com/fau-is/xnap){:target="_blank"}
 
 **1. Introduction**
 
@@ -29,6 +30,37 @@ published: true
   <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-16-xai-ts-PaperReview_2_1.jpg" style="width:80%" class="center">
 </figure>
 
-2) LRP for LSTM
+2) LRP
+- Post-hoc & Model-specific XAI Method
+- LRP는 설명 대상 모델이 어떤 종류와 구성의 네트워크인가에 따라 구하는 실제 식(세부 내역)이 다르게 정의됨.
+- [LRP에 대한 보다 자세한 소개](https://allaboutxai.github.io/xai/2022/06/15/xai-md_LRP/){:target="_blank"}
 
+3) LRP for LSTM
+- 본 논문은 <span style="font-weight:bold">Next Activity Prediction</span>을 위해 Many-to-one Weighted Linear Connection과 Two-to-one Multiplicative Interaction 두 가지 연결을 가지는 LSTM의 LRP를 계산하는 방법을 제안.
+ 
+**3. Related Work on Explainable PBPM**
 
+생략
+
+**4. XNAP: Explainable Next Activity Prediction**
+
+1) 학습
+- 이벤트 로그에 대한 전처리, 레이블 생성 및 Onehot 인코딩, Bi-LSTM 사용
+- 결과는 Softmax
+
+2) 테스트(추론)
+
+3) 실험 및 평가
+- helpdesk event log와 bpi2019 데이터 사용
+- 예측 성능
+<figure>
+  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-16-xai-ts-PaperReview_2_2.jpg" style="width:80%" class="center">
+  <figcaption>Table. 2: Predictive quality of XNAP's Bi-LSTM model for the 10 folds.</figcaption>
+</figure>
+- 실행(분석)예
+<figure>
+  <img src="https://AllAboutXAI.github.io/assets/img/XAI/ts/2022-06-16-xai-ts-PaperReview_2_3.jpg" style="width:80%" class="center">
+  <figcaption>Fig. 3: Activity relevances of XNAP's LRP.</figcaption>
+</figure>
+
+[Tim's Note] 해당 이벤트 로그의 당사자(?)가 아니어서인지 Fig. 3의 예와 같은 설명이 인상적이거나 도움이 크게 된다는 느낌은 없음.

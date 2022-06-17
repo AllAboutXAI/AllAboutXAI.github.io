@@ -63,4 +63,4 @@ published: true
   <figcaption>Fig. 3: Activity relevances of XNAP's LRP.</figcaption>
 </figure>
 
-[Tim's Note] 해당 이벤트 로그의 당사자(?)가 아니어서인지 Fig. 3의 예와 같은 설명이 인상적이거나 도움이 크게 된다는 느낌은 없음.
+[Tim's Note] 해당 이벤트 로그의 당사자(?)가 아니어서인지 Fig. 3의 예와 같은 설명이 인상적이거나 도움이 크게 된다고 생각되지는 않음.

@@ -18,8 +18,19 @@ published: true
 - This work proposes <span style="color: green;">evaluating these attribution methods on semi-natural datasets:</span> natural datasets systematically modified to introduce ground truth information for attributions.
 
 <span style="color: green;">[Tim's Note]</span> Feature Arribution Method 번역
-대체로 "특성 기여도 분석 방법"으로 번역됨.
+대체로 "특성 기여도 분석 방법"으로 번역하여 Attribution을 "기여도 분석"이라고 풀어 대입하고 있으나, "귀속"이라는 단어를 쓰는 것이 더 적절할 것으로 생각됨.
 
-**2.1 Feature Attribution Methods**
+**2.1. Feature Attribution Methods**
 
 1) <span style="font-weight:bold;">Saliency maps</span> explain a image I by producing S of same size, where S<sub>h, w</sub> indicates the contribution of pixel I<sub>h, w</sub>.
+
+2) <span style="font-weight:bold;">Attention mechanisms</span> were orignally proposed to better retain sequential information. Recently they have been used as attribution values, but their validity is under debate with different and inconsistent criteria being proposed.
+
+3) <span style="font-weight:bold;">Rational models</span> are inheretly interpretable models for text classificatin with a two-stage pipeline.
+
+**2.2. Evaluation of Feature Attributions**
+
+**3. Desiderata for Attribution Values**
+
+**4. Dataset Modification with Ground Truth**
+

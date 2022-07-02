@@ -30,7 +30,16 @@ published: true
 
 **2.2. Evaluation of Feature Attributions**
 
-**3. Desiderata for Attribution Values**
+**3. Desiderata(Requirment/Prerequisite) for Attribution Values**
 
+1) 모든 피처들을 고려한다면
+- 중요한 피처를 F<sub>C</sub>, 도움이 안되는(Non-informative) 피처를 F<sub>N</sub>라고 정의
+- 각 피처의 귀속률(attribution percentage) Attr%는 다음과 같은 식으로 정의
+<figure>
+  <img src="https://AllAboutXAI.github.io/assets/img/XAI/md/2022-06-28-xai-md-PR_1.jpg" style="width:80%" class="center">
+</figure>
+D: 전체 피처 수, S<sub>i</sub>는 i번째 피처의 귀속 값
+- Attr%(F<sub>C</sub>)가 1에 가깝도록, Attr%(F<sub>N</sub>)이 0에 가까워야 설명이 잘 되는 것으로 평가될 수 있음 
+																													   
 **4. Dataset Modification with Ground Truth**
 

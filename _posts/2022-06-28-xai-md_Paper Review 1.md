@@ -47,3 +47,6 @@ D: 전체 피처 수, S<sub>i</sub>는 i번째 피처의 귀속 값
 																													   
 **4. Dataset Modification with Ground Truth**
 
+**5. Evaluating Image Saliency Maps**
+
+**6. Evaluating Text Attentions**

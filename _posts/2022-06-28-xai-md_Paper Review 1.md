@@ -15,9 +15,9 @@ published: true
 1) Feature attribution methods
 - like saliency maps are used to identify regions which are important for prediction.
 - Does this truly work well? Not easy to answer, notably by a lack of ground truth.
-- This work proposes <span style="color: green;">evaluating these attribution methods on semi-natural datasets:</span> natural datasets systematically modified to introduce ground truth information for attributions.
+- This work proposes <span style="color: green;">evaluating these attribution methods on semi-natural datasets:</span> natural datasets systematically modified to introduce ground truth information for attributions. <span style="font-weight:bold;">본 논문은 Feature Attribution Method를 평가할 수 있는 ground truth를 생성/정의하는 방법을 제안하고 제안한 방법의 유용성을 확인하기 위해 Saliency Map, Attention Mechanism, Rational Model에 적용해 봄.</span>
 
-<span style="color: green;">[Tim's Note]</span> Feature Arribution Method 번역
+<span style="color: green;">[Tim's Note]</span> "Feature Arribution Method"의 번역
 대체로 "특성 기여도 분석 방법"으로 번역하여 Attribution을 "기여도 분석"이라고 풀어 대입하고 있으나, "귀속"이라는 단어를 쓰는 것이 더 적절할 것으로 생각됨.
 
 **2.1. Feature Attribution Methods**
@@ -32,7 +32,7 @@ published: true
 
 **3. Desiderata(Requirment/Prerequisite) for Attribution Values**
 
-1) 모든 피처들을 고려한다며
+1) 모든 피처들을 고려한다면
 - 각 피처의 귀속률(attribution percentage) Attr%는 다음과 같은 식으로 정의
 <figure>
   <img src="https://AllAboutXAI.github.io/assets/img/XAI/md/2022-06-28-xai-md-PR_1.jpg" style="width:60%" class="center">
@@ -50,3 +50,7 @@ D: 전체 피처 수, S<sub>i</sub>는 i번째 피처의 귀속 값
 **5. Evaluating Image Saliency Maps**
 
 **6. Evaluating Text Attentions**
+
+**7. Evaluating Text Rationals**
+
+**8. Conclusion and Future Work**

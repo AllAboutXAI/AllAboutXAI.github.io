@@ -75,7 +75,7 @@ published: true
 
 5) Usng "Attention Mechanism" for Time Series Classification
 - Attention mechanisms can be used for time series classification [Karim al.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8141873){:target="_blank"} or time series forecasting [Schockaert et al.](https://arxiv.org/ftp/arxiv/papers/2007/2007.12617.pdf){:target="_blank"}
-- Attention mechanisms are Ante-Hoc explainability methods.
+- Attention mechanisms are Ante-hoc explainability methods.
 
 6) Usng "SAX(Symbolic Aggregate Approximation), a Data Mining Approach," for Time Series Classification
 - SAX transforms the input time series into strings.
@@ -105,7 +105,7 @@ published: true
 - It could be by domain experts.
 - But, the unintuitive nature of time series make it difficult even for domain experts to qualitatively assess the quality of the explanations generated.
 
-3) Quantiative Evaluations
+3) Quantitative Evaluations
 - [Tonekaboni et al.](https://openreview.net/pdf?id=HygDF1rYDB){:target="_blank"}, [Cho et al.](https://arxiv.org/pdf/2004.12538.pdf){:target="_blank"}
 - [Arnout et al.](https://arxiv.org/pdf/1909.07082.pdf){:target="_blank"} propose two new quantitative evaluation methods to overcome the limitations of the perturbation approach, which has a lack of evaluation of trends or patterns in the time series.
 
